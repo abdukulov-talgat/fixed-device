@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <title>Device: Главная страница</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
 </head>
+
 <body>
+  <div class="layout-center">
+    <header class="header">
+      <a class="header__logo-link" href="index.html">
+        <img class="header__logo-img" width="145" height="36" src="img/header-logo.svg" alt="Наш логотип">
+      </a>
+      <form class="header__search-form" action="https://echo.htmlacademy.ru" method="get">
+        <div class="header__search-group">
+          <label class="visually-hidden" for="search-field">Поиск по сайту:</label>
+          <input class="header__search-input" type="text" name="query" id="search-field" placeholder="Поиск по сайту">
+          <button class="header__search-submit" type="submit">Найти</button>
+        </div>
+      </form>
+      <div class="header__column">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link header__nav-link--user" href="#">Войти</a>
+          </li>
+        </ul>
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link header__nav-link--compare" href="#">Сравнить</a>
+          </li>
+          <li class="header__nav-item">
+            <button class="header__nav-link header__nav-link--cart" type="button">
+              <span class="header__count">2</span>
+              Корзина
+            </button>
+          </li>
+        </ul>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--expanded">
+            <a class="main-nav__link main-nav__link--icon" href="catalog.html">Каталог товаров</a>
+            <ul class="main-nav__sub-list">
+              <li class="main-nav__sub-item">
+                <a class="main-nav__sub-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="main-nav__sub-item">
+                <a class="main-nav__sub-link" href="#">Моноподы для cелфи</a>
+              </li>
+              <li class="main-nav__sub-item">
+                <a class="main-nav__sub-link" href="#">Экшн-камеры</a>
+              </li>
+              <li class="main-nav__sub-item">
+                <a class="main-nav__sub-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="main-nav__sub-item">
+                <a class="main-nav__sub-link" href="#">Умные часы</a>
+              </li>
+              <li class="main-nav__sub-item">
+                <a class="main-nav__sub-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Доставка</a>
+          </li>
+          <li class="main-nav__item main-nav__item--margin-right">
+            <a class="main-nav__link" href="#">Гарантия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 
 </body>
+
 </html>
