@@ -683,6 +683,7 @@ body {
 .slider {
   background-image: linear-gradient(180deg, var(--special-yellow-light) 150px, transparent 150px);
   counter-reset: pagination-num;
+  margin-bottom: 70px;
 }
 
 .slider__slide {
@@ -888,4 +889,80 @@ body {
 
 .splide__arrow:disabled {
   opacity: 0;
+}
+
+/* Categories */
+
+.categories__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
+  gap: 40px;
+}
+
+.categories__link {
+  display: block;
+  text-decoration: none;
+  outline: none;
+}
+
+.categories__link:hover .categories__box {
+  background-color: var(--special-yellow-dark);
+}
+
+.categories__link:focus .categories__box {
+  background-color: var(--special-yellow-light);
+  outline: 5px solid var(--special-purpe);
+}
+
+.categories__link:focus .categories__title {
+  color: var(--special-purpe);
+}
+
+.categories__link:active .categories__box {
+  outline-color: transparent;
+  background-color: var(--special-yellow-dark);
+}
+
+.categories__link:active .categories__title {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.categories__link:active .categories__img {
+  opacity: 0.3;
+}
+
+
+.categories__box {
+  display: flex;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 33px;
+  background-color: var(--special-yellow-light);
+  outline-color: transparent;
+  transition: outline-color 0.3s, background-color 0.3s;
+}
+
+.categories__img {
+  margin: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: all 0.3s;
+}
+
+.categories__img--monopad {
+  margin-bottom: 0;
+}
+
+.categories__title {
+  font-family: "Raleway", sans-serif;
+  font-size: inherit;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: var(--basic-black);
+  transition: color 0.3s, opacity 1s;
 }
