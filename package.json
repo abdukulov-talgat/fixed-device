@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "stylelint": "^14.6.1"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.0.1"
   }
 }

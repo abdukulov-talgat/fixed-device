@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Device: Главная страница</title>
-  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="css/splide-core.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="layout-center">
-    <header class="header">
+    <header class="header header--index">
       <a class="header__logo-link" href="index.html">
         <img class="header__logo-img" width="145" height="36" src="img/header-logo.svg" alt="Наш логотип">
       </a>
@@ -77,7 +79,94 @@
       </nav>
     </header>
   </div>
+  <main>
+    <h1 class="visually-hidden">Интернет магазин современных гаджетов Device</h1>
+    <div class="layout-center">
+      <section class="splide slider" aria-label="Splide Basic HTML Example">
+        <h2 class="visually-hidden">Популярные товары</h2>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev"></button>
+          <button class="splide__arrow splide__arrow--next"></button>
+        </div>
+        <div class="splide__track">
+          <ol class="splide__list">
+            <li class="splide__slide">
+              <article class="slider__slide">
+                <h3 class="visually-hidden">Квадрокоптер</h3>
+                <div class="slider__box">
+                  <img class="slider__img" src="img/slider/slider-1.png" width="560" height="560" alt>
+                </div>
+                <div class="slider__description">
+                  <p class="slider__title">Порхает как бабочка, жалит как пчела!</p>
+                  <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                  <a class="button button--light slider__button" href="#">Подробнее</a>
+                  <ul class="slider__stats">
+                    <li class="slider__stats-item">
+                      <span class="slider__stats-text">800 м</span>
+                      <span class="slider__stats-title">Дальность полета</span>
+                    </li>
+                    <li class="slider__stats-item">
+                      <span class="slider__stats-text">50 м</span>
+                      <span class="slider__stats-title">Радиус поражения</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="slider__slide">
+                <h3 class="visually-hidden">Фитнес-браслет</h3>
+                <div class="slider__box">
+                  <img class="slider__img" src="img/slider/slider-2.png" width="560" height="560" alt>
+                </div>
+                <div class="slider__description">
+                  <p class="slider__title">Худеем<br>правильно!</p>
+                  <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                  <a class="button button--light slider__button" href="#">Подробнее</a>
+                  <ul class="slider__stats">
+                    <li class="slider__stats-item">
+                      <span class="slider__stats-text">48 часов</span>
+                      <span class="slider__stats-title">Без подзарядки</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+            <li class="splide__slide">
+              <article class="slider__slide">
+                <h3 class="visually-hidden">Бесполезная палка для селфи</h3>
+                <div class="slider__box">
+                  <img class="slider__img" src="img/slider/slider-3.png" width="560" height="560" alt>
+                </div>
+                <div class="slider__description">
+                  <p class="slider__title">Делай селфи,<br>как Бен Стиллер! </p>
+                  <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+                  <a class="button button--light slider__button" href="#">Подробнее</a>
+                  <ul class="slider__stats">
+                    <li class="slider__stats-item">
+                      <span class="slider__stats-text">8,5 м</span>
+                      <span class="slider__stats-title">Длина палки</span>
+                    </li>
+                    <li class="slider__stats-item">
+                      <span class="slider__stats-text">5 кг</span>
+                      <span class="slider__stats-title">Вес палки</span>
+                    </li>
+                    <li class="slider__stats-item">
+                      <span class="slider__stats-text">Карбон</span>
+                      <span class="slider__stats-title">Материал</span>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
 
+          </ol>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="js/splide.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
