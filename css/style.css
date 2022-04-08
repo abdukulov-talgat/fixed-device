@@ -171,6 +171,8 @@ body {
   color: var(--basic-black);
   transition: color 0.3s;
   outline: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 
@@ -201,7 +203,15 @@ body {
   bottom: 0;
 }
 
+.button:active::before {
+  background-color: var(--special-yellow-dark);
+}
+
 .button--light::before {
+  background-color: var(--special-yellow-light);
+}
+
+.button--light:active::before {
   background-color: var(--special-yellow-light);
 }
 
@@ -893,6 +903,10 @@ body {
 
 /* Categories */
 
+.categories {
+  margin-bottom: 80px;
+}
+
 .categories__list {
   margin: 0;
   padding: 0;
@@ -959,10 +973,119 @@ body {
 
 .categories__title {
   font-family: "Raleway", sans-serif;
+  margin: 0;
   font-size: inherit;
   font-weight: 800;
   line-height: 24px;
   letter-spacing: -0.02em;
   color: var(--basic-black);
   transition: color 0.3s, opacity 1s;
+}
+
+/* Services */
+
+.tab {
+  background-image: linear-gradient(180deg, transparent 101px, var(--basic-light) 101px);
+  padding-top: 62px;
+  padding-bottom: 69px;
+}
+
+.tab__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab__container::before {
+  content: "";
+  position: absolute;
+  left: 277px;
+  top: -61px;
+  bottom: -10px;
+  width: 7px;
+  background-color: var(--basic-black);
+}
+
+.tab__buttons {
+  margin: 0;
+  margin-top: 19px;
+  padding: 0;
+  list-style: none;
+  width: 277px;
+}
+
+.tab__buttons-item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.tab__button {
+  z-index: 0;
+  min-width: 160px;
+}
+
+.tab__button--active {
+  width: 100%;
+  padding: 9.5px 18px;
+  text-align: left;
+  color: var(--special-yellow-light);
+  background-color: var(--basic-black);
+}
+
+.tab__button--active::before {
+  content: none;
+}
+
+.tab__button--active:focus {
+  outline: 3px solid var(--special-purpe);
+  outline-offset: -3px;
+}
+
+.tab__overflow {
+  overflow: hidden;
+  width: 760px;
+  height: 248px;
+  transition: height 0.5s;
+}
+
+.tab__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column-reverse;
+  transition: margin-top 0.5s;
+}
+
+.tab__item {
+  padding-top: 10px;
+  padding-right: 260px;
+  min-height: 248px;
+  background-repeat: no-repeat;
+  background-image: url("../img/icons/icon-delivery.svg");
+  background-position: top 24px right 66px;
+}
+
+
+.tab__item--warranty {
+  background-image: url("../img/icons/icon-warranty.svg");
+  background-position: top 1px right 46px;
+}
+
+.tab__item--credit {
+  background-image: url("../img/icons/icon-credit.svg");
+  background-position: top 1px right 70px;
+}
+
+.tab__title {
+  margin: 0;
+  margin-bottom: 33px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: var(--basic-black);
+}
+
+.tab__text {
+  margin: 0;
 }
