@@ -1275,6 +1275,23 @@ body {
 }
 
 .information__address-link {
+  display: inline-block;
   color: inherit;
+  transform: scale(1);
+  transition: all 0.3s;
+  transform-origin: 0 50%;
+  outline: none;
 }
 
+.information__address-link:hover {
+  color: var(--special-yellow-dark);
+}
+
+.information__address-link:focus {
+  color: var(--special-purpe);
+  transform: scale(1.1);
+}
+
+.information__address-link:active {
+  opacity: 0.5;
+}
