@@ -1295,3 +1295,124 @@ body {
 .information__address-link:active {
   opacity: 0.5;
 }
+
+/* Newsletter */
+.newsletter {
+  min-height: 421px;
+  background-color: var(--basic-light);
+}
+
+.newsletter__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 59px;
+  align-items: center;
+}
+
+.newsletter__title {
+  margin: 0;
+  margin-top: 76px;
+  width: 560px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: var(--basic-black);
+}
+
+.newsletter__text {
+  margin: 0;
+  margin-top: 86px;
+  width: 560px;
+}
+
+.newsletter__form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.newsletter__input {
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 9px;
+  padding-right: 40px;
+  padding-left: 0;
+  width: 600px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-dark);
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.newsletter__input::placeholder {
+  color: var(--basic-dark);
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.newsletter__input:hover::placeholder {
+  opacity: 0.7;
+}
+
+.newsletter__input:hover {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.newsletter__input:focus {
+  background-color: var(--basic-gray);
+}
+
+.newsletter__input:not(:placeholder-shown) {
+  border-bottom: 3px solid var(--basic-black);
+  background-color: transparent;
+}
+
+.newsletter__input.newsletter__input--error {
+  border-bottom: 3px solid var(--status-error);
+}
+
+.newsletter__submit {
+  padding: 14px 15px;
+  width: 260px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: inherit;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.newsletter__submit:hover {
+  background-color: var(--basic-black);
+  color: var(--basic-white);
+}
+
+.newsletter__submit:focus {
+  border-color: var(--special-purpe);
+}
+
+.newsletter__submit:active {
+  background-color: var(--basic-black);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.newsletter__free {
+  margin: 0;
+  padding-left: 36px;
+  background-image: url("../img/icons/icon-success.svg");
+  background-repeat: no-repeat;
+  background-position: top 8px left 0;
+}
+
