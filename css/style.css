@@ -174,6 +174,11 @@ body {
   gap: 40px;
 }
 
+.content-container {
+  padding-left: 60px;
+  margin-bottom: 49px;
+}
+
 .button {
   position: relative;
   display: inline-block;
@@ -238,6 +243,7 @@ body {
 /* Header */
 
 .header {
+  margin-bottom: 38px;
   margin-top: 40px;
   padding-top: 39px;
   padding-bottom: 38px;
@@ -251,6 +257,7 @@ body {
 
 .header--index {
   padding-bottom: 2px;
+  margin-bottom: 0;
 }
 
 .header__logo-link {
@@ -1646,3 +1653,356 @@ body {
   fill: var(--basic-white);
   opacity: 0.3;
 }
+
+/* Breadcrumbs */
+
+.content-header {
+  margin: 0;
+  margin-bottom: 23px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: var(--basic-black);
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__item:not(:last-child) {
+  position: relative;
+  padding-right: 35px;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 13px;
+  top: 7px;
+  width: 4px;
+  height: 7px;
+  background-image: url("../img/icons/icon-nav-arrow.svg");
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}
+
+.breadcrumbs__link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.6);
+  outline: none;
+}
+
+.breadcrumbs__link:hover {
+  color: var(--basic-black);
+}
+
+.breadcrumbs__link:focus::before {
+  content: "";
+  position: absolute;
+  border: 5px solid var(--special-purpe);
+  top: -10px;
+  bottom: -11px;
+  left: -18px;
+  right: -17px;
+}
+
+.breadcrumbs__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs__link:active::before {
+  content: none;
+}
+
+/* Catalog */
+
+.catalog {
+  display: grid;
+  grid-template-columns: 269px 760px;
+  column-gap: 72px;
+  justify-content: end;
+}
+
+.catalog__filter {
+  grid-column: 1 / 2;
+  grid-row: 1/3;
+}
+
+.catalog__sort {
+  grid-column: 2 / -1;
+  height: 50px;
+  background-color: red;
+  opacity: 0.5;
+}
+
+.catalog__goods {
+  grid-column: 2/-1;
+  grid-row: 2/3;
+  height: 500px;
+  background-color: blue;
+  opacity: 0.5;
+}
+
+.catalog__title {
+  position: relative;
+  margin: 0;
+  padding: 25px 0;
+  padding-left: 1px;
+  min-height: 70px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  background-color: var(--basic-gray);
+}
+
+.catalog__title::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -32767px;
+  background-color: var(--basic-gray);
+}
+
+.catalog__form {
+  position: relative;
+  background-color: var(--basic-light-gray);
+  padding: 71px 0;
+}
+
+.catalog__form::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -32767px;
+  right: 0;
+  bottom: 0;
+  background-color: var(--basic-light-gray);
+}
+
+.catalog__fieldset {
+  margin: 0;
+  margin-bottom: 36px;
+  padding: 0;
+  border: 0;
+}
+
+.catalog__fieldset--mbottom {
+  margin-bottom: 44px;
+}
+
+.catalog__legend {
+  position: relative;
+  margin-bottom: 29px;
+  padding-top: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: var(--basic-black);
+}
+
+.catalog__legend::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 200px;
+  height: 2px;
+  background-color: var(--basic-black);
+}
+
+.catalog__control {
+  margin-left: 1px;
+}
+
+.catalog__control:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.catalog__submit {
+  margin-top: 6px;
+  min-width: 200px;
+  z-index: 1;
+}
+
+/* Range slider */
+
+.range-slider {
+  padding-bottom: 25px;
+}
+
+.range-slider__range {
+  position: relative;
+  padding: 8px 0;
+  width: 200px;
+  height: 18px;
+  background-color: var(--basic-gray);
+  background-clip: content-box;
+}
+
+.range-slider__indicator {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  height: 2px;
+  background-color: var(--basic-black);
+}
+
+.range-slider__toggler {
+  top: -50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--basic-black);
+  background-color: var(--basic-light-gray);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-slider__toggler:hover,
+.range-slider__toggler:focus {
+  border-color: var(--special-purpe);
+}
+
+.range-slider__toggler:hover + .range-slider__label,
+.range-slider__toggler:focus + .range-slider__label {
+  color: var(--special-purpe);
+}
+
+.range-slider__toggler:active {
+  background-color: var(--basic-black);
+  border-color: var(--basic-black);
+}
+
+.range-slider__toggler:active + .range-slider__label {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.range-slider__toggler + .range-slider__label {
+  top: 17px;
+}
+
+.range-slider__toggler--min + .range-slider__label {
+  left: -5px;
+}
+
+.range-slider__toggler--max + .range-slider__label {
+  left: 91px;
+}
+
+.range-slider__label {
+  position: absolute;
+  font-family: inherit;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.range-slider__input {
+  padding: 0;
+  border: 0;
+  width: 70px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  appearance: none;
+  background-color: transparent;
+  outline: none;
+}
+
+/* Control */
+
+.control {
+  display: flex;
+  color: var(--basic-black);
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.control__mark {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--basic-black);
+  border-radius: 3px;
+  margin-right: 17px;
+  cursor: pointer;
+}
+
+/* Checkbox */
+.control__input:not(:checked) + .control__mark {
+  opacity: 0.2;
+}
+
+.control__input:not(:checked) + .control__mark svg {
+  display: none;
+}
+
+/* Radio */
+.control__input[type="radio"] + .control__mark {
+  border-radius: 50%;
+}
+
+.control__input[type="radio"]:checked + .control__mark::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--basic-black);
+}
+
+/* Hover */
+.control:hover .control__input + .control__mark {
+  opacity: 0.5;
+}
+
+.control:hover .control__input ~ .control__label {
+  opacity: 0.5;
+}
+
+/* Focus */
+.control__input:focus + .control__mark {
+  border-color: var(--special-purpe);
+  fill: var(--special-purpe);
+  opacity: 1;
+}
+
+.control__input:focus ~ .control__label {
+  color: var(--special-purpe);
+}
+
+.control__input[type="radio"]:focus + .control__mark::before {
+  background-color: var(--special-purpe);
+}
+/* Active */
+.control__input:active + .control__mark {
+  opacity: 0.2;
+}
+
+.control__input:active ~ .control__label {
+  opacity: 0.2;
+}
+

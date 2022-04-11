@@ -83,6 +83,111 @@
       </header>
     </div>
     <main class="main">
+      <div class="layout-center content-container">
+        <h1 class="content-header">Моноподы для селфи</h1>
+        <ol class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Каталог товаров</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link">Моноподы для селфи</a>
+          </li>
+        </ol>
+      </div>
+      <div class="catalog layout-center">
+        <section class="catalog__filter">
+          <h2 class="catalog__title">фильтр:</h2>
+          <form class="catalog__form" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="catalog__fieldset">
+              <legend class="catalog__legend">Стоимость</legend>
+              <div class="range-slider">
+                <div class="range-slider__range">
+                  <div class="range-slider__indicator" style="left: 0; right:36%">
+                    <button class="range-slider__toggler range-slider__toggler--min" type="button" aria-label="Изменить минимальную цену"></button>
+                    <label class="range-slider__label">
+                      от
+                      <input class="range-slider__input" type="number" name="min-price" readonly tabindex="-1" value="0">
+                    </label>
+                    <button class="range-slider__toggler range-slider__toggler--max" type="button" aria-label="Изменить максимальную цену"></button>
+                    <label class="range-slider__label">
+                      до
+                      <input class="range-slider__input" type="number" name="max-price" readonly tabindex="-1" value="5000">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="catalog__fieldset catalog__fieldset--mbottom">
+              <legend class="catalog__legend">Цвет</legend>
+              <label class="catalog__control control">
+                <input class="control__input visually-hidden" type="checkbox" name="color-black" checked>
+                <span class="control__mark">
+                  <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" />
+                  </svg>
+                </span>
+                <span class="control__label">Черный</span>
+              </label>
+              <label class="catalog__control control">
+                <input class="control__input visually-hidden" type="checkbox" name="color-white" id="color-white" checked>
+                <span class="control__mark">
+                  <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" />
+                  </svg>
+                </span>
+                <span class="control__label" for="color-white">Белый</span>
+              </label>
+              <label class="catalog__control control">
+                <input class="control__input visually-hidden" type="checkbox" name="color-blue" id="color-blue">
+                <span class="control__mark">
+                  <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" />
+                  </svg>
+                </span>
+                <span class="control__label" for="color-blue">Синий</span>
+              </label>
+              <label class="catalog__control control">
+                <input class="control__input visually-hidden" type="checkbox" name="color-red" id="color-red">
+                <span class="control__mark">
+                  <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" />
+                  </svg>
+                </span>
+                <span class="control__label" for="color-red">Красный</span>
+              </label>
+              <label class="catalog__control control">
+                <input class="control__input visually-hidden" type="checkbox" name="color-pink" id="color-pink">
+                <span class="control__mark">
+                  <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" />
+                  </svg>
+                </span>
+                <span class="control__label" for="color-pink">Розовый</span>
+              </label>
+            </fieldset>
+            <fieldset class="catalog__fieldset">
+              <legend class="catalog__legend">Bluetooth</legend>
+              <label class="catalog__control control">
+                <input class="control__input visually-hidden" type="radio" name="bluetooth" value="yes" id="bluetooth-yes" checked>
+                <span class="control__mark"></span>
+                <span class="control__label" for="bluetooth-yes">Есть</span>
+              </label>
+              <label class="catalog__control control">
+                <input class="control__input visually-hidden" type="radio" name="bluetooth" value="no" id="bluetooth-no">
+                <span class="control__mark"></span>
+                <span class="control__label" for="bluetooth-no">Нет</span>
+              </label>
+            </fieldset>
+            <button class="catalog__submit button" type="submit">Показать</button>
+          </form>
+        </section>
+
+        <section class="catalog__sort"></section>
+        <section class="catalog__goods"></section>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__container layout-center">
