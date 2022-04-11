@@ -99,8 +99,8 @@
       </div>
       <div class="catalog layout-center">
         <section class="catalog__filter">
-          <h2 class="catalog__title">фильтр:</h2>
-          <form class="catalog__form" action="https://echo.htmlacademy.ru" method="get">
+          <div class="catalog__bg"><h2 class="catalog__title catalog__title--filter">фильтр:</h2></div>
+          <form class="catalog__form" id="catalog-form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="catalog__fieldset">
               <legend class="catalog__legend">Стоимость</legend>
               <div class="range-slider">
@@ -184,9 +184,25 @@
             <button class="catalog__submit button" type="submit">Показать</button>
           </form>
         </section>
-
-        <section class="catalog__sort"></section>
-        <section class="catalog__goods"></section>
+        <div class="catalog__column">
+          <section class="catalog__sort catalog__bg catalog__bg--order">
+            <h2 class="catalog__title catalog__title--order">сортировка:</h2>
+            <select class="control-select" form="catalog-form">
+              <option value="expensive">Сначала дорогие</option>
+              <option value="cheap">Сначала дешевые</option>
+              <option value="popular" selected>Сначала популярные</option>
+            </select>
+            <div class="catalog__order order">
+              <button class="order__button order__button--ascendant" type="button" aria-label="По возростанию">
+                <svg width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0 11 10H0"/></svg>
+              </button>
+              <button class="order__button order__button--descendant order__button--active " type="button" aria-label="По убыванию">
+                <svg width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0 11 10H0"/></svg>
+              </button>
+            </div>
+          </section>
+          <section class="catalog__goods"></section>
+        </div>
       </div>
     </main>
     <footer class="footer">
