@@ -2637,6 +2637,20 @@ body {
   transform: translate(-50%) rotate(-45deg);
 }
 
+.modal__close:hover {
+  opacity: 0.6;
+}
+
+.modal__close:focus {
+  outline: 5px solid var(--special-purpe);
+  outline-offset: 0;
+}
+
+.modal__close:active {
+  opacity: 0.3;
+  outline: none;
+}
+
 /* Number range */
 .number-range {
   position: relative;

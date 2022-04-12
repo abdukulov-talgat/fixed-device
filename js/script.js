@@ -3,9 +3,12 @@
 (function () {
     initSlider();
     initTabs();
-
+    initModal();
 
     function initSlider() {
+        if(!document.querySelector('.splide'))
+            return;
+
         let splide = new Splide('.splide', {
             paginationKeyboard: true
         });
@@ -25,6 +28,9 @@
 
 
     function initTabs() {
+        if(!document.querySelector('.tab'))
+            return;
+
         const tabOverflow = document.querySelector('.tab__overflow');
         const buttons = document.querySelector('.tab__buttons');
         const tabs = document.querySelector('.tab__list');
@@ -71,12 +77,26 @@
     }
 
 
+
+
+    function initModal() {
+        const modal = document.querySelector('.modal');
+
+        if(!modal)
+            return
+
+        const close = modal.querySelector('.modal__close');
+        const btn = document.querySelector('.shipping__button');
+
+        btn.addEventListener('click', () => {
+            modal.classList.add('modal--open');
+        });
+
+        close.addEventListener('click', () => {
+            modal.classList.remove('modal--open');
+        });
+    }
 })();
-
-
-//TODO: Tab Navigation by arrows? May be
-
-
 
 
 
