@@ -1759,10 +1759,42 @@ body {
   padding-bottom: 77px;
 }
 
+.catalog__load-more {
+  width: 100%;
+  padding: 15px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.catalog__load-more:hover {
+  border-color: var(--basic-black);
+}
+
+.catalog__load-more:focus {
+  outline: 5px solid var(--special-purpe);
+  outline-offset: -5px;
+}
+
 .catalog__bg {
   position: relative;
   background-color: var(--basic-gray);
 }
+
+.catalog__load-more:active {
+  border-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
 
 .catalog__bg::before {
   content: "";
@@ -2095,6 +2127,7 @@ body {
 /* Cards */
 .cards {
   margin: 0;
+  margin-bottom: 46px;
   padding: 0;
   list-style: none;
   display: grid;
