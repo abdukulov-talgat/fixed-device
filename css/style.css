@@ -517,6 +517,7 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .main-nav__item {
@@ -1497,6 +1498,7 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer__nav-item:not(:last-child) {
@@ -1961,13 +1963,15 @@ body {
 }
 
 .range-slider__label {
+  display: flex;
   position: absolute;
   font-family: inherit;
-  white-space: nowrap;
   font-size: 15px;
   line-height: 18px;
   color: var(--basic-black);
   opacity: 0.3;
+  max-height: 30px;
+  overflow: hidden;
 }
 
 .range-slider__input {
@@ -1993,6 +1997,7 @@ body {
 }
 
 .control__mark {
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   display: flex;
@@ -2219,6 +2224,7 @@ body {
   line-height: 24px;
   width: 80px;
   text-align: right;
+  word-break: break-word;
 }
 
 .cards__button-wrapper {
