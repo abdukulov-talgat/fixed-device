@@ -99,7 +99,9 @@
       </div>
       <div class="catalog layout-center">
         <section class="catalog__filter">
-          <div class="catalog__bg"><h2 class="catalog__title catalog__title--filter">фильтр:</h2></div>
+          <div class="catalog__bg">
+            <h2 class="catalog__title catalog__title--filter">фильтр:</h2>
+          </div>
           <form class="catalog__form" id="catalog-form" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="catalog__fieldset">
               <legend class="catalog__legend">Стоимость</legend>
@@ -132,76 +134,132 @@
                 <span class="control__label">Черный</span>
               </label>
               <label class="catalog__control control">
-                <input class="control__input visually-hidden" type="checkbox" name="color-white" id="color-white" checked>
+                <input class="control__input visually-hidden" type="checkbox" name="color-white" checked>
                 <span class="control__mark">
                   <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" />
                   </svg>
                 </span>
-                <span class="control__label" for="color-white">Белый</span>
+                <span class="control__label">Белый</span>
               </label>
               <label class="catalog__control control">
-                <input class="control__input visually-hidden" type="checkbox" name="color-blue" id="color-blue">
+                <input class="control__input visually-hidden" type="checkbox" name="color-blue">
                 <span class="control__mark">
                   <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" />
                   </svg>
                 </span>
-                <span class="control__label" for="color-blue">Синий</span>
+                <span class="control__label">Синий</span>
               </label>
               <label class="catalog__control control">
-                <input class="control__input visually-hidden" type="checkbox" name="color-red" id="color-red">
+                <input class="control__input visually-hidden" type="checkbox" name="color-red">
                 <span class="control__mark">
                   <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" />
                   </svg>
                 </span>
-                <span class="control__label" for="color-red">Красный</span>
+                <span class="control__label">Красный</span>
               </label>
               <label class="catalog__control control">
-                <input class="control__input visually-hidden" type="checkbox" name="color-pink" id="color-pink">
+                <input class="control__input visually-hidden" type="checkbox" name="color-pink">
                 <span class="control__mark">
                   <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 0 3.1 6.6 0 3.6v3.3L3.2 10 10 3.3V0Z" />
                   </svg>
                 </span>
-                <span class="control__label" for="color-pink">Розовый</span>
+                <span class="control__label">Розовый</span>
               </label>
             </fieldset>
             <fieldset class="catalog__fieldset">
               <legend class="catalog__legend">Bluetooth</legend>
               <label class="catalog__control control">
-                <input class="control__input visually-hidden" type="radio" name="bluetooth" value="yes" id="bluetooth-yes" checked>
+                <input class="control__input visually-hidden" type="radio" name="bluetooth" value="yes" checked>
                 <span class="control__mark"></span>
-                <span class="control__label" for="bluetooth-yes">Есть</span>
+                <span class="control__label">Есть</span>
               </label>
               <label class="catalog__control control">
-                <input class="control__input visually-hidden" type="radio" name="bluetooth" value="no" id="bluetooth-no">
+                <input class="control__input visually-hidden" type="radio" name="bluetooth" value="no">
                 <span class="control__mark"></span>
-                <span class="control__label" for="bluetooth-no">Нет</span>
+                <span class="control__label">Нет</span>
               </label>
             </fieldset>
             <button class="catalog__submit button" type="submit">Показать</button>
           </form>
         </section>
-        <div class="catalog__column">
+        <div>
           <section class="catalog__sort catalog__bg catalog__bg--order">
             <h2 class="catalog__title catalog__title--order">сортировка:</h2>
-            <select class="control-select" form="catalog-form">
+            <select class="control-select" name="sort" form="catalog-form">
               <option value="expensive">Сначала дорогие</option>
               <option value="cheap">Сначала дешевые</option>
               <option value="popular" selected>Сначала популярные</option>
             </select>
             <div class="catalog__order order">
               <button class="order__button order__button--ascendant" type="button" aria-label="По возростанию">
-                <svg width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0 11 10H0"/></svg>
+                <svg width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 0 11 10H0" />
+                </svg>
               </button>
               <button class="order__button order__button--descendant order__button--active " type="button" aria-label="По убыванию">
-                <svg width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0 11 10H0"/></svg>
+                <svg width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 0 11 10H0" />
+                </svg>
               </button>
             </div>
           </section>
-          <section class="catalog__goods"></section>
+          <section class="catalog__goods">
+            <h2 class="visually-hidden">Список товаров</h2>
+            <ul class="cards">
+              <li class="cards__item">
+                <a class="cards__link" href="#">
+                  <img class="cards__img" src="img/product/product-1.jpg" width="360" height="380" alt>
+                  <div class="cards__group">
+                    <h3 class="cards__title">Любительская селфи-палка</h3>
+                    <span class="cards__price">500 ₽</span>
+                  </div>
+                </a>
+                <div class="cards__button-wrapper">
+                  <a class="button cards__button" href="#">Подробнее</a>
+                </div>
+              </li>
+              <li class="cards__item">
+                <a class="cards__link" href="#">
+                  <img class="cards__img" src="img/product/product-2.jpg" width="360" height="380" alt>
+                  <div class="cards__group">
+                    <h3 class="cards__title">Профессиональная<br>селфи-палка</h3>
+                    <span class="cards__price">1 500 ₽</span>
+                  </div>
+                </a>
+                <div class="cards__button-wrapper">
+                  <a class="button cards__button" href="#">Подробнее</a>
+                </div>
+              </li>
+              <li class="cards__item">
+                <a class="cards__link" href="#">
+                  <img class="cards__img" src="img/product/product-3.jpg" width="360" height="380" alt>
+                  <div class="cards__group">
+                    <h3 class="cards__title">Непотопляемая<br>селфи-палка</h3>
+                    <span class="cards__price">2 500 ₽</span>
+                  </div>
+                </a>
+                <div class="cards__button-wrapper">
+                  <a class="button cards__button" href="#">Подробнее</a>
+                </div>
+              </li>
+              <li class="cards__item">
+                <a class="cards__link" href="#">
+                  <img class="cards__img" src="img/product/product-4.jpg" width="360" height="380" alt>
+                  <div class="cards__group">
+                    <h3 class="cards__title">Селфи-палка «Следуй за мной»</h3>
+                    <span class="cards__price">4 900 ₽</span>
+                  </div>
+                </a>
+                <div class="cards__button-wrapper">
+                  <a class="button cards__button" href="#">Подробнее</a>
+                </div>
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
     </main>

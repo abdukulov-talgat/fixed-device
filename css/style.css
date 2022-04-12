@@ -148,6 +148,7 @@ body {
 
 .main {
   flex-grow: 1;
+  overflow-x: hidden;
 }
 
 .visually-hidden {
@@ -1732,11 +1733,20 @@ body {
   justify-content: end;
 }
 
-.catalog__column {
-
+.catalog__filter {
+  position: relative;
+  background-color: var(--basic-light-gray);
 }
 
-.catalog__filter {
+.catalog__filter::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -32767px;
+  right: 0;
+  bottom: 0;
+  background-color: var(--basic-light-gray);
 }
 
 .catalog__sort {
@@ -1745,9 +1755,8 @@ body {
 }
 
 .catalog__goods {
-  height: 500px;
-  background-color: blue;
-  opacity: 0.5;
+  padding-top: 69px;
+  padding-bottom: 77px;
 }
 
 .catalog__bg {
@@ -1795,20 +1804,7 @@ body {
 }
 
 .catalog__form {
-  position: relative;
-  background-color: var(--basic-light-gray);
   padding: 71px 0;
-}
-
-.catalog__form::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: -32767px;
-  right: 0;
-  bottom: 0;
-  background-color: var(--basic-light-gray);
 }
 
 .catalog__fieldset {
@@ -2095,3 +2091,85 @@ body {
 .order-button:active {
   fill: var(--basic-black);
 }
+
+/* Cards */
+.cards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 360px 360px;
+  gap: 46px 40px;
+}
+
+.cards__item {
+  position: relative;
+}
+
+.cards__link {
+  display: block;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Hover */
+.cards__item:hover .cards__button-wrapper {
+  display: flex;
+}
+/* Focus */
+.cards__link:focus .cards__img {
+  outline: 5px solid var(--special-purpe);
+  outline-offset: -5px;
+}
+
+.cards__link:focus .cards__title,
+.cards__link:focus .cards__price {
+  color: var(--special-purpe);
+}
+
+.cards__img {
+  display: block;
+  width: 360px;
+  height: 380px;
+  margin-bottom: 32px;
+}
+
+.cards__group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards__title {
+  width: 270px;
+  margin: 0;
+  font-size: inherit;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: var(--basic-black);
+}
+
+.cards__price {
+  color: var(--basic-dark);
+  line-height: 24px;
+  width: 80px;
+  text-align: right;
+}
+
+.cards__button-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 380px;
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+.cards__button {
+  margin-top: 1px;
+  min-width: 180px;
+  z-index: 1;
+}
+
