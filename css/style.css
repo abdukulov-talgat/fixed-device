@@ -2146,6 +2146,32 @@ body {
   outline: none;
 }
 
+.cards__link--new {
+  position: relative;
+}
+
+.cards__link--new::before {
+  content: "new";
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--basic-black);
+  border-radius: 50%;
+  opacity: 0.6;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
 /* Hover */
 .cards__item:hover .cards__button-wrapper {
   display: flex;
