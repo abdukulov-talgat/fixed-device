@@ -49,8 +49,8 @@
                   </li>
                   <li class="popup__item">
                     <a class="popup__link" href="#">
-                    <img class="popup__img" src="img/product-small/product-2-small.jpg" width="41" height="43" alt>
-                    <b class="popup__title">Профессиональная селфи-палка</b>
+                      <img class="popup__img" src="img/product-small/product-2-small.jpg" width="41" height="43" alt>
+                      <b class="popup__title">Профессиональная селфи-палка</b>
                     </a>
                     <button class="popup__delete" aria-label="Удалить товар из корзины"></button>
                   </li>
@@ -396,6 +396,44 @@
       </div>
     </footer>
   </div>
+  <section class="modal">
+    <div class="modal__box">
+      <h2 class="modal__title">Доставка под заказ</h2>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal__column modal__column--span2">
+          <label class="modal__label" for="username">Ваше имя:</label>
+          <input class="modal__input modal__input--user modal__input--error" type="text" name="username" id="username" placeholder="Имя Фамилия">
+          <span class="modal__message">Пожалуйста, представьтесь</span>
+        </p>
+        <p class="modal__column modal__column--span2">
+          <label class="modal__label" for="email">Ваш e-mail:</label>
+          <input class="modal__input modal__input--email" type="email" name="email" id="email" placeholder="example@gmail.com" value="krasotka92@mail.ru">
+          <span class="modal__message">Забавный у вас адрес</span>
+        </p>
+        <p class="modal__column modal__column--span3">
+          <label class="modal__label" for="email">Что нужно привезти:</label>
+          <input class="modal__input" type="text" name="message" id="email" placeholder="В свободной форме">
+          <span class="modal__message"></span>
+        </p>
+        <div class="modal__column">
+          <label class="modal__label modal__label--tooltip" for="quantity">
+            Количество:
+            <span class="tooltip">
+              <span class="tooltip__message">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+            </span>
+          </label>
+        <div class="number-range">
+          <button class="number-range__button number-range__button--decrement" type="button"><span class="visually-hidden">Уменьшить на 1</span></button>
+          <input class="number-range__input" type="number" name="quantity" id="quantity" placeholder="123">
+          <button class="number-range__button number-range__button--increment" type="button"><span class="visually-hidden">Увеличить на 1</span></button>
+        </div>
+        <span class="modal__message"></span>
+        </div>
+        <button class="button modal__submit">Отправить</button>
+      </form>
+      <button class="modal__close" type="button" aria-label="Закрыть окно"></button>
+    </div>
+  </section>
   <script src="js/splide.min.js"></script>
   <script src="js/script.js"></script>
 </body>
